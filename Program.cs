@@ -1,4 +1,3 @@
-﻿
 //using System.Math;
 using static System.Math;
 
@@ -7,6 +6,10 @@ namespace LINECOMPARISION
     class Program
 
     {
+        public static void Main(string[] args)
+        {
+            //user Input
+            
         public static void Main(string[] args)
         {
             //user Input
@@ -19,14 +22,22 @@ namespace LINECOMPARISION
             Console.Write("Enter any  value y2: ");
             double y2 = Convert.ToDouble(Console.ReadLine());
 
+            double d1 = x1 - y1;
+            double d2 = x2 - y2;
 
-            double distance = Convert.ToDouble(Console.Read());
+            int distance = d1.CompareTo(d2);
 
-            distance = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            Console.WriteLine(distance);
-            Console.ReadKey();
+            // checking the status
+            if (distance > 0)
+                Console.WriteLine("line 1 is greater than line 2");
+            else if (distance < 0)
+                Console.WriteLine("line 1 is less than line 2");
+            else
+                Console.WriteLine("line 1 is equal to line 2");
+
+            
+             Console.ReadKey();
         }
     }
-
 
 }
